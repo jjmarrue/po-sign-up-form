@@ -5,8 +5,62 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Project Odin Sign-up Form</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
 </head>
 <body>
-  
+  <div class="container">
+    <div class="sidebar">
+      <div class="bg-header">
+        <h1 id="header">Umbra</h1>
+      </div>  
+    </div>
+    <div class="main-content">
+      <div class="intro">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam numquam voluptates dicta nesciunt ab quidem veritatis minima nam maxime officiis.  
+      </div>
+      <main>
+        <div class="form-container">
+          <form action="" method="post">
+            <div id="form-content">
+              <p class="intro-para">Let's do this!</p>
+              <div class="form-section">
+                <label for="first_name">First Name</label>
+                <input type="text" name="first_name" id="first_name">
+              </div>
+              <div class="form-section">
+                <label for="last_name">Last Name</label>
+                <input type="text" name="last_name" id="last_name">
+              </div>
+              <div class="form-section">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+              </div>
+              <div class="form-section">
+                <label for="phone_number">Phone Number</label>
+                <input type="tel" name="phone_number" id="phone_number">
+              </div>
+              <div class="form-section">
+                <label for="pwd">Password</label>
+                <input type="password" name="pwd" id="pwd">
+              </div>
+              <div class="form-section">
+                <label for="confirm_pwd">Confirm Password</label>
+                <input type="password" name="confirm_pwd" id="confirm_pwd">
+              </div>
+            </div>  
+            <div class="btn-container">
+              <button type="submit">Create Account</button>
+              <p>Already have an account? <a href="#">Log in</a></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>Copyright &copy; 2022 Juan Mata</p><a href="#">Github</a>
+      <p>A personal project created for the <a href="https://www.theodinproject.com/" target="_blank">Odin Project</a>.</p>
+    </footer>
+  </div>
 </body>
 </html>
