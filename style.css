@@ -1,0 +1,85 @@
+@font-face {
+  font-family: 'alien_worldregular';
+  src: url('./alienworld-owj0x-webfont.woff2') format('woff2'),
+       url('./alienworld-owj0x-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;400;700&display=swap');
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+    /* border: 1px solid red;  */
+}
+
+body {
+  background-color: black;
+  font-family: 'JetBrains Mono', monospace;
+
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  max-width: 75%;
+  margin: auto;
+  background-color: white;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: url(./cyberpunk.jpg), blue;
+  background-size:cover;
+  background-repeat: no-repeat;
+  width: 45%;
+}
+
+.bg-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0,0,0,.5);
+  height: 150px;
+  font-family: alien_worldregular, monospace, serif;
+  color: white;
+}
+
+.bg-header > img {
+  max-width: 6rem;
+  height: auto;
+  margin: 0;
+}
+
+#header {
+  text-transform: uppercase;
+  font-size: 3.75rem;
+  margin: -14px;
+  letter-spacing: 0.25rem;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+}
+
+main {
+  height: 100%;
+}
+
+.form-container {
+ 
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
