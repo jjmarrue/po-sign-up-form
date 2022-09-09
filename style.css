@@ -21,7 +21,6 @@
   --main-txt-font: 'Lexend', sans-serif;
   --main-txt-font-size: 1.25rem;
   --form-font-size: 0.9rem;
-  --form-btn-clr: #596D48;
 }
 
 *, *::before, *::after {
@@ -108,7 +107,6 @@ form {
 
 .form-container{
   background-color: var(--form-bg-clr);
-
 }
 
 .section-container {
@@ -156,14 +154,26 @@ input:invalid {
 .divider {
   height: 0;
   width: 100%;
-  top: 78%;
-  box-shadow:  0 0px 4px 1px rgba(0,0,0,0.25);
+  box-shadow:  0 2px 4px 1px rgba(0,0,0,0.15);
+  z-index: 999;
 } 
 
 .btn-container {
-  padding: 25px 0 40px 35px;
+  padding: 40px 0 40px 40px;
   background-color: var(--main-bg-clr);
 }
+
+.btn-container button {
+  background-color: var(--submit-btn-clr);
+  color: var(--form-bg-clr);
+  border: 0;
+  border-radius: 8px;
+  padding: 0.75em 2em;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
 
 footer {
   display: flex;
