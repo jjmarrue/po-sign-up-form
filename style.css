@@ -20,10 +20,12 @@
   --input-invalid-clr: #ee2a7d;
   --company-font: alien_worldregular, monospace, serif;
   --main-txt-font: 'Lexend', sans-serif;
-  --logo-font-size: clamp(3.25rem, 3vw, 4.5rem);
+  --logo-font-size: clamp(2.5rem, 3vw, 4.5rem);
   --intro-p-font-size: clamp(1rem, 3vw, 1.25rem);
   --input-label-font-size: clamp(.75rem, 3vw, 1.1rem);
   --btn-font-size: clamp(0.85rem, 3vw, 1.25rem);
+  --logo-size: clamp(4rem, 10vw, 5.50rem);
+  --footer-txt-side: clamp(.75rem, 3vw, 1rem);
 }
 
 *, *::before, *::after {
@@ -52,9 +54,10 @@ a:hover {
 
 h1 {
   text-transform: uppercase;
-  margin-top: -14px;
+  margin-top: -10px;
   letter-spacing: 0.25rem;
   font-size: var(--logo-font-size);
+  padding-bottom: -10px;
 }
 
 .container {
@@ -87,9 +90,9 @@ h1 {
 }
 
 .bg-header > img {
-  width: 5rem;
+  width: var(--logo-size);
   height: auto;
-  margin: 0;
+  margin-top: 5px;
 }
 
 .main-content {
@@ -128,7 +131,6 @@ form {
   flex-wrap: wrap;
   width: 85%;
   padding: 55px 25px 55px 25px;
-
 }
 
 .form-section {
@@ -192,6 +194,7 @@ input, label {
 
 .btn-container button:hover {
   background-color: #ee2a7d;
+  transition: 0.5s;
 }
 
 footer {
@@ -201,15 +204,23 @@ footer {
 }
 
 footer p {
-  font-size: clamp(.5rem, 3vw, .75rem);
+  font-size: var(--footer-txt-side);
   font-weight: 300;
   line-height: 1.75em;
 }
 
+footer .fa-github{
+  font-size: 20px;
+}
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 900px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
   .sidebar {
-   display: none;
+    width: 100%;
+    height: inherit;
   }
   .main-content {
     width: 100%;
@@ -225,7 +236,6 @@ footer p {
   }
   .form-section {
     flex: 100%;
-
   }
   .btn-container {
     width: 100%;
@@ -236,13 +246,13 @@ footer p {
   .btn-container button {
     align-self: stretch;
   }
-  footer {
-
-  }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1030px) {
   .section-container {
-    width: 90%;
+    width: 100%;
+  }
+  .bg-header {
+    height: auto;
   }
 }
