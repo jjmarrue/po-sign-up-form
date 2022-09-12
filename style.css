@@ -8,19 +8,22 @@
 }  
 
 :root {
-  --main-bg-clr: #ced5d9;
+  --main-bg-clr: #faf9f9;
   --body-bg-clr: #2a282a;
   --form-bg-clr: #fdfdfd;
   --para-clr: #090909;
-  --link-clr: #48c1c3;
-  --submit-btn-clr: #596D48;
+  --link-clr: #06aed5;
+  --link-hover-clr: #48c1c3;
+  --submit-btn-clr: #2a282a;
   --input-default-clr: #E5E7EB;
-  --input-selected-clr: #48c1c3;
+  --input-selected-clr: #06aed5;
   --input-invalid-clr: #ee2a7d;
   --company-font: alien_worldregular, monospace, serif;
   --main-txt-font: 'Lexend', sans-serif;
-  --main-txt-font-size: 1.25rem;
-  --form-font-size: 0.9rem;
+  --logo-font-size: clamp(3.25rem, 3vw, 4.5rem);
+  --intro-p-font-size: clamp(1rem, 3vw, 1.25rem);
+  --input-label-font-size: clamp(.75rem, 3vw, 1.1rem);
+  --btn-font-size: clamp(0.85rem, 3vw, 1.25rem);
 }
 
 *, *::before, *::after {
@@ -33,7 +36,25 @@
 body {
   background-color: var(--body-bg-clr);
   font-family: var(--main-txt-font);
+  line-height: 1.5;
   width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--link-clr);
+}
+
+a:hover {
+  color: var(--link-hover-clr);
+  text-decoration: underline;
+}
+
+h1 {
+  text-transform: uppercase;
+  margin-top: -14px;
+  letter-spacing: 0.25rem;
+  font-size: var(--logo-font-size);
 }
 
 .container {
@@ -48,7 +69,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: url(./cyberpunk.jpg), blue;
+  background: url(./cyberpunk.jpg), rgb(17, 17, 107);
   background-size:cover;
   background-repeat: no-repeat;
   width: 30%;
@@ -71,13 +92,6 @@ body {
   margin: 0;
 }
 
-#header {
-  text-transform: uppercase;
-  font-size: 3.75rem;
-  margin-top: -14px;
-  letter-spacing: 0.25rem;
-}
-
 .main-content {
   display: flex;
   flex-direction: column;
@@ -89,20 +103,20 @@ main {
 }
 
 .intro {
-  font-size: var(--main-txt-font-size);
   margin: 100px 100px 20px 40px;
 }
 
 .intro p{
   font-weight: 400;
-  line-height: 1.95rem;
   padding-bottom: 20px;
+  font-size: var(--intro-p-font-size);
 }
 
 form {
   background-color: var(--form-bg-clr);
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .form-container{
@@ -112,19 +126,18 @@ form {
 .section-container {
   display: flex;
   flex-wrap: wrap;
-  width: 75%;
-  padding: 55px 0 55px 25px;
+  width: 85%;
+  padding: 55px 25px 55px 25px;
 
 }
 
 .form-section {
   flex: 50%;
-  padding: 12px 15px;
+  padding: 16px 15px;
 }
 
 .form-section label {
   text-transform: uppercase;
-  font-size: var(--form-font-size);
 }
 
 input {
@@ -134,12 +147,10 @@ input {
   border: 1px solid var(--input-default-clr);
   border-radius: 5px;
   padding: 5px;
-  margin-top: 5px;
-  font-size: var(--form-font-size);
+  margin-top: 7px;
 }
 
 input:focus, input:invalid {
-  border-color: var(--input-selected-clr);
   box-shadow: 1px 2px 3px 1px rgba(0,0,0,0.15);
 }
 
@@ -151,6 +162,10 @@ input:invalid {
   border-color: var(--input-invalid-clr);
 }
 
+input, label {
+  font-size: var(--input-label-font-size);
+}
+
 .divider {
   height: 0;
   width: 100%;
@@ -159,7 +174,7 @@ input:invalid {
 } 
 
 .btn-container {
-  padding: 40px 0 40px 40px;
+  padding: 44px 40px 30px 40px;
   background-color: var(--main-bg-clr);
 }
 
@@ -168,21 +183,66 @@ input:invalid {
   color: var(--form-bg-clr);
   border: 0;
   border-radius: 8px;
-  padding: 0.75em 2em;
-  font-size: 1.15rem;
+  padding: 0.75rem 2.5rem;
+  font-size: var(--btn-font-size);
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 28px;
+  cursor: pointer;
 }
 
+.btn-container button:hover {
+  background-color: #ee2a7d;
+}
 
 footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 0.75rem;
-  font-weight: 300;
+  padding: 20px;
+  text-align: center;
+  box-shadow:  0 2px 4px 1px rgba(0,0,0,0.15);
 }
 
 footer p {
-  line-height: 1.15rem;
+  font-size: clamp(.5rem, 3vw, .75rem);
+  font-weight: 300;
+  line-height: 1.75em;
+}
+
+
+@media screen and (max-width: 960px) {
+  .sidebar {
+   display: none;
+  }
+  .main-content {
+    width: 100%;
+  }
+  .intro {
+    width: inherit;
+    margin-top: 40px;
+    margin-right: 40px;
+  }
+  .section-container {
+    width: 100%;
+    padding-top: 25px;
+  }
+  .form-section {
+    flex: 100%;
+
+  }
+  .btn-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .btn-container button {
+    align-self: stretch;
+  }
+  footer {
+
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .section-container {
+    width: 90%;
+  }
 }
