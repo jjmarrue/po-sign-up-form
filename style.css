@@ -21,8 +21,8 @@
   --company-font: alien_worldregular, monospace, serif;
   --main-txt-font: 'Lexend', sans-serif;
   --logo-font-size: clamp(2.5rem, 3vw, 4.5rem);
-  --intro-p-font-size: clamp(1rem, 3vw, 1.25rem);
-  --input-label-font-size: clamp(.75rem, 3vw, 1.1rem);
+  --intro-p-font-size: clamp(1rem, 3vw, 1.2rem);
+  --input-label-font-size: clamp(.75rem, 3vw, 1.05rem);
   --btn-font-size: clamp(0.85rem, 3vw, 1.25rem);
   --logo-size: clamp(4rem, 10vw, 5.50rem);
   --footer-txt-side: clamp(.75rem, 3vw, 1rem);
@@ -129,13 +129,13 @@ form {
 .section-container {
   display: flex;
   flex-wrap: wrap;
-  width: 85%;
-  padding: 55px 25px 55px 25px;
+  width: 77%;
+  padding: 25px 25px 35px 25px;
 }
 
 .form-section {
   flex: 50%;
-  padding: 16px 15px;
+  padding: 16px 40px;
 }
 
 .form-section label {
@@ -231,12 +231,23 @@ footer .fa-github{
     margin-right: 40px;
   }
   .section-container {
-    width: 100%;
     padding-top: 25px;
+  }
+  .btn-container button {
+    align-self: stretch;
+  }
+}
+
+@media screen and (max-width: 1230px) {
+  .bg-header {
+    height: auto;
   }
   .form-section {
     flex: 100%;
   }
+  .form-section:nth-child(2){
+    display: none;
+   } 
   .btn-container {
     width: 100%;
     display: flex;
@@ -248,11 +259,8 @@ footer .fa-github{
   }
 }
 
-@media screen and (max-width: 1030px) {
+@media screen and (max-width: 1450px) {
   .section-container {
     width: 100%;
-  }
-  .bg-header {
-    height: auto;
   }
 }

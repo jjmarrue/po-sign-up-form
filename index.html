@@ -24,31 +24,37 @@
           <p>Sign up below to start a free <strong>30-day trial</strong>.</p>       
         </div>     
         <div class="form-container">
-          <form action="" method="post">           
-              <div class="section-container">             
+           
+          <form action="" method="post">        
+              <div class="section-container">  
                 <div class="form-section">
-                  <label for="first_name">First Name</label>
-                  <input type="text" name="first_name" id="first_name">
+                  <p>* <em>Marked as required</em></p> 
                 </div>
                 <div class="form-section">
-                  <label for="last_name">Last Name</label>
-                  <input type="text" name="last_name" id="last_name">
+                </div>                   
+                <div class="form-section">
+                  <label for="first_name">First Name *</label>
+                  <input type="text" name="first_name" id="first_name" >
                 </div>
                 <div class="form-section">
-                  <label for="email">Email</label>
-                  <input type="email" name="email" id="email">
+                  <label for="last_name">Last Name *</label>
+                  <input type="text" name="last_name" id="last_name" required>
+                </div>
+                <div class="form-section">
+                  <label for="email">Email *</label>
+                  <input type="email" name="email" id="email" required>
                 </div>
                 <div class="form-section">
                   <label for="phone_number">Phone Number</label>
                   <input type="tel" name="phone_number" id="phone_number">
                 </div>
                 <div class="form-section">
-                  <label for="pwd">Password</label>
-                  <input type="password" class="error" name="pwd" id="pwd">
+                  <label for="pwd">Password *</label>
+                  <input type="password" class="error" name="pwd" id="pwd" required>
                 </div>
                 <div class="form-section">
-                  <label for="confirm_pwd">Confirm Password</label>
-                  <input type="password" class="error" name="confirm_pwd" id="confirm_pwd">
+                  <label for="confirm_pwd">Confirm Password *</label>
+                  <input type="password" class="error" name="confirm_pwd" id="confirm_pwd" required>
                 </div>
               </div>
              <div class="divider"></div>
