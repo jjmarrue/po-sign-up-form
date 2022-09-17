@@ -150,22 +150,35 @@ input {
   border-radius: 5px;
   padding: 5px;
   margin-top: 7px;
-}
-
-input:focus, input:invalid {
   box-shadow: 1px 2px 3px 1px rgba(0,0,0,0.15);
 }
+
+/* input:focus,
+input:user-invalid,
+.invalid {
+  box-shadow: 1px 2px 3px 1px rgba(0,0,0,0.15);
+} */
 
 input:focus {
   border-color: var(--input-selected-clr);
 }
 
-input:invalid {
-  border-color: var(--input-invalid-clr);
+ .invalid {
+  border: 1px solid var(--input-invalid-clr);
 }
 
 input, label {
   font-size: var(--input-label-font-size);
+}
+
+.error {
+  display: none;
+  padding: 10px 5px;
+  font-size: 0.9rem;
+}
+
+.error.visible {
+  display: block;
 }
 
 .divider {
@@ -245,9 +258,6 @@ footer .fa-github{
   .form-section {
     flex: 100%;
   }
-  .form-section:nth-child(2){
-    display: none;
-   } 
   .btn-container {
     width: 100%;
     display: flex;
